@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Sentiment-Based Text Generator</h1>
+<form action="{{ url_for('generate') }}" method="POST">
+    <div class="form-group">
+        <label for="seed_words">Enter the first two words:</label>
+        <input type="text" id="seed_words" name="seed_words" required>
+    </div>
+    <div class="form-group">
+        <label for="sentiment">Choose the sentiment:</label>
+        <select id="sentiment" name="sentiment" required>
+            <option value="positive">Positive</option>
+            <option value="negative">Negative</option>
+        </select>
+    </div>
+    <button type="submit">Generate Text</button>
+</form>
+{% endblock %}
