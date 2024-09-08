@@ -5,6 +5,9 @@
     ],
     "routes": [
       { "src": "/(.*)", "dest": "app.py" }
-    ]
+    ],
+    "python": {
+      "version": "3.9"
+    }
 }
   
